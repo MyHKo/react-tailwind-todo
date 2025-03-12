@@ -1,6 +1,6 @@
 import Title from "./components/Title";
-import NameInput from "./components/NameInput/index.jsx";
-import Task from "./components/Task/index.jsx";
+import NameInput from "./components/NameInput";
+import Task from "./components/Task";
 
 function App() {
 
