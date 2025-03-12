@@ -1,5 +1,6 @@
 import Title from "./components/Title";
 import NameInput from "./components/NameInput/index.jsx";
+import Task from "./components/Task/index.jsx";
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
         <div className={"bg-gray-900 rounded-lg p-4 h-150 w-250"}>
           <Title />
           <NameInput />
+          <Task />
         </div>
       </div>
   )
