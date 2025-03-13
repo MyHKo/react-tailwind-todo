@@ -8,7 +8,7 @@ function NameInput() {
     return (
         <div className="flex flex-row justify-between gap-5 mt-5 mb-5 h-13">
             <div className="flex items-center rounded-lg p-2 w-full bg-gray-700">
-                <input className="text-gray-200 text-2xl h-full focus:outline-none" ref={input}/>
+                <input className="text-gray-200 text-2xl h-full w-full focus:outline-none" ref={input}/>
             </div>
             <button
                 className="text-gray-200 text-xl font-bold rounded-lg h-full w-40 bg-green-500 hover:bg-green-400 active:bg-green-500 cursor-pointer"
