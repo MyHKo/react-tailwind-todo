@@ -6,7 +6,6 @@ import {ListContext} from "/src/context/ListContext/ListContext.js"
 
 function App() {
     const [list] = useContext(ListContext)
-    console.log(list)
 
     const taskList = list.map((task) => (
         <Task key={task.id} id={task.id} name={task.name}/>
