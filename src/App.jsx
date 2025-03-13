@@ -8,7 +8,7 @@ function App() {
     const [list] = useContext(ListContext)
 
     const taskList = list.map((task) => (
-        <Task key={task.id} id={task.id} name={task.name}/>
+        <Task key={task.id} id={task.id} name={task.name} done={task.done}/>
     ))
 
   return (
