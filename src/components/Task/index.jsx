@@ -1,8 +1,10 @@
-function Task() {
+import PropTypes from "prop-types"
+
+function Task({id, name}) {
     return (
-        <div className="flex flex-row justify-between gap-5 mt-5 mb-5 h-13">
+        <div id={id} className="flex flex-row justify-between gap-5 mt-5 mb-5 h-13">
             <div className="flex text-gray-200 text-2xl w-full items-center rounded-lg p-2 bg-gray-700">
-                Task Name
+                {name}
             </div>
             <button className="text-gray-200 text-xl font-bold rounded-lg h-full w-30 bg-blue-500 hover:bg-blue-400 cursor-pointer">
                 Done
@@ -15,3 +17,8 @@ function Task() {
 }
 
 export default Task
+
+Task.propTypes = {
+    id: PropTypes.string.isRequired,
+    name: PropTypes.object.isRequired,
+}
