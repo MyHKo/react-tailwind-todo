@@ -1,12 +1,12 @@
-import {useContext} from "react"
-import {ListContext} from "/src/context/ListContext/ListContext.js"
 import PropTypes from "prop-types"
+import {useDispatch} from "react-redux"
+import {removeTodo} from "src/redux/actions.js"
+
 
 function RemoveButton({ id }) {
-    const [, , deleteTask] = useContext(ListContext)
-
+    const dispatch = useDispatch()
     const handleDelete = () => {
-        deleteTask(id)
+        dispatch(removeTodo(id))
     }
 
     return (
