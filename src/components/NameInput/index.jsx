@@ -1,9 +1,11 @@
-import {useContext, useRef} from "react"
-import {ListContext} from '/src/context/ListContext/ListContext.js'
+import {useRef} from "react"
+import {useDispatch} from 'react-redux'
+import {addTodo} from "../../redux/todoSlice.js"
 
 function NameInput() {
-    const [, addTask] = useContext(ListContext)
     const input = useRef(null)
+
+    const dispatch = useDispatch()
 
     return (
         <div className="flex flex-row justify-between gap-2 sm:gap-5 mt-5 mb-5 h-13">
@@ -14,7 +16,7 @@ function NameInput() {
                 className="text-gray-200 text-xl font-bold rounded-lg h-full w-20 sm:w-40 bg-green-500 hover:bg-green-400 active:bg-green-500 cursor-pointer"
                 onClick={() => {
                     if(input.current.value !== "") {
-                        addTask(input.current.value)
+                        dispatch(addTodo(input.current.value))
                         input.current.value = ""
                     }
                 }}
