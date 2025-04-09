@@ -1,10 +1,11 @@
 import Title from "/src/components/Title"
 import NameInput from "/src/components/NameInput"
 import Task from "/src/components/Task"
-import {useSelector} from "react-redux";
+import {useSelector} from "react-redux"
+import {selectTodos} from "/src/redux/selectors.js"
 
 function App() {
-    const list = useSelector(state => state.todos)
+    const list = useSelector(selectTodos)
 
     const taskList = list.map((task) => (
         <Task key={task.id} id={task.id} name={task.name} done={task.done}/>
