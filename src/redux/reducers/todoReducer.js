@@ -1,4 +1,5 @@
 import {nanoid} from "nanoid";
+import {ADD_TODO, REMOVE_TODO} from "../constraints.js";
 
 const initialState = {
     todos: []
@@ -6,7 +7,7 @@ const initialState = {
 
 function todoReducer(state = initialState, action) {
     switch (action.type) {
-        case 'ADD_TODO':
+        case ADD_TODO:
             return {
                 todos: [...state.todos,{
                     id:nanoid(),
@@ -15,7 +16,7 @@ function todoReducer(state = initialState, action) {
                         }
                     ]
             }
-        case 'REMOVE_TODO':
+        case REMOVE_TODO:
             return {
                 todos: state.todos.filter(task => task.id !== action.payload)
             }

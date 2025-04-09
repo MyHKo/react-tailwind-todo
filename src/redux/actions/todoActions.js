@@ -1,9 +1,11 @@
+import {ADD_TODO, REMOVE_TODO} from "../constraints.js";
+
 export const addTodo = (name) => ({
-    type: 'ADD_TODO',
+    type: ADD_TODO,
     payload: name,
 })
 
 export const removeTodo = (id) => ({
-    type: 'REMOVE_TODO',
+    type: REMOVE_TODO,
     payload:id,
 })
