@@ -1,6 +1,6 @@
 import {useRef} from "react"
 import {useDispatch} from "react-redux"
-import {addTodo} from "/src/redux/actions.js"
+import {addTodo} from "/src/redux/actions/todoActions.js"
 
 function NameInput() {
     const input = useRef(null)

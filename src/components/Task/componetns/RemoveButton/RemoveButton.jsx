@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import {useDispatch} from "react-redux"
-import {removeTodo} from "/src/redux/actions.js"
+import {removeTodo} from "/src/redux/actions/todoActions.js"
 
 
 function RemoveButton({ id }) {
