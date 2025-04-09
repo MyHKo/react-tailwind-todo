@@ -1,4 +1,4 @@
-import {ADD_TODO, REMOVE_TODO, TOGGLE_TODO} from "../constraints.js";
+import {ADD_TODO, REMOVE_TODO, TOGGLE_TODO} from "../constants.js";
 
 export const addTodo = (name) => ({
     type: ADD_TODO,

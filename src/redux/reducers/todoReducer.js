@@ -1,5 +1,5 @@
 import {nanoid} from "nanoid";
-import {ADD_TODO, REMOVE_TODO, TOGGLE_TODO} from "../constraints.js";
+import {ADD_TODO, REMOVE_TODO, TOGGLE_TODO} from "../constants.js";
 
 const initialState = {
     todos: []
