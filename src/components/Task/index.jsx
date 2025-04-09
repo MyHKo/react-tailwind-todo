@@ -1,12 +1,10 @@
 import PropTypes from "prop-types"
-import {useState} from "react"
 import DoneButton from "/src/components/Task/componetns/DoneButton/DoneButton.jsx"
 import RemoveButton from "/src/components/Task/componetns/RemoveButton/RemoveButton.jsx"
 
 function Task({id, name, done}) {
-    const [isDone, setIsDone] = useState(done)
 
-    const nameStyle = isDone
+    const nameStyle = done
     ? `flex text-gray-200 text-2xl line-through h-auto w-full items-center rounded-lg p-2 bg-gray-400`
     : `flex text-gray-200 text-2xl h-auto w-full items-center rounded-lg p-2 bg-gray-700`
 
@@ -16,7 +14,7 @@ function Task({id, name, done}) {
                 {name}
             </div>
             <div className="flex sm:justify-center sm:items-center gap-5">
-                <DoneButton setIsDone={setIsDone} isDone={isDone} />
+                <DoneButton isDone={done} todoId={id} />
                 <RemoveButton id={id}/>
             </div>
         </div>

@@ -1,8 +1,12 @@
 import PropTypes from "prop-types"
+import {useDispatch} from "react-redux"
+import {toggleTodo} from "/src/redux/actions/todoActions.js";
 
-function DoneButton({ isDone, setIsDone }) {
+function DoneButton({ todoId, isDone }) {
+    const dispatch = useDispatch()
+
     const toggle = () => {
-        setIsDone(!isDone)
+        dispatch(toggleTodo(todoId))
     }
 
     return (
@@ -21,5 +25,5 @@ export default DoneButton
 
 DoneButton.propTypes = {
     isDone: PropTypes.bool.isRequired,
-    setIsDone: PropTypes.func.isRequired,
+    todoId: PropTypes.string.isRequired,
 }
