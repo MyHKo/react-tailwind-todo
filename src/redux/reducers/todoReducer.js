@@ -9,6 +9,7 @@ function todoReducer(state = initialState, action) {
     switch (action.type) {
         case ADD_TODO:
             return {
+                ...state,
                 todos: [...state.todos,{
                     id:nanoid(),
                     name: action.payload,
@@ -18,10 +19,12 @@ function todoReducer(state = initialState, action) {
             }
         case REMOVE_TODO:
             return {
+                ...state,
                 todos: state.todos.filter(task => task.id !== action.payload)
             }
         case TOGGLE_TODO:
             return {
+                ...state,
                 todos: state.todos.map((todo) => {
                     if (todo.id === action.payload) {
                         return { ...todo, done: !todo.done };
